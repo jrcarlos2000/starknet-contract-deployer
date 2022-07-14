@@ -25,12 +25,17 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 module.exports = {
   solidity: "0.8.4",
   starknet : {
-    dockerizedVersion : '0.8.1-arm',
+    dockerizedVersion : '0.9.0-arm',
     network : "devnet"
   },
   networks: {
     devnet: {
       url: "http://localhost:5050",
+    },
+    integratedDevnet: {
+      url: "http://127.0.0.1:5050",
+      dockerizedVersion: "0.2.5-arm",
+      args: ["--lite-mode", "--gas-price", "2000000000"]
     }
   },
   gasReporter: {

@@ -16,6 +16,10 @@ npx hardhat starknet-compile
 ```
 npx hardhat test
 ```
+## About the environment 
+
+This works with devnet version : `0.2.2-arm`  ->  docker image config
+this works with cairo-lang version : `0.8.1-arm` -> set in hardhat config.
 ## Difficulties
 
 Transactions take long to load in voyager
